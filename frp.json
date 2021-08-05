@@ -14,32 +14,33 @@
         },
         "32bit": {
             "url": "https://hub.fastgit.org/fatedier/frp/releases/download/v0.37.1/frp_0.37.1_windows_amd64.zip",
-            "hash": "ecfd51545084d9b791874062c39eb0c7c7dd2991265ee7f4dc5064995a614e6c"
+            "hash": "740D39BBD15A64919A30684524D34757E6B5DC89030C9FA44410E9BBD4430950"
         }
     },
     //bin变量
     "bin": "frp_0.37.1_windows_amd64/frpc.exe",
     // 快捷方式
-    "shortcuts": [
-        [
-            "frpc.exe",
-            "frpc"
-        ]
-    ],
+    // "shortcuts": [
+    //     [
+    //         "frpc.exe",
+    //         "frpc"
+    //     ]
+    // ],
     //校验器  frp_0.37.1_windows_amd64.zip
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://hub.fastgit.org/fatedier/frp/releases/download/v$version/frp_$_windows_amd64.zip"
+                "url": "https://hub.fastgit.org/fatedier/frp/releases/download/v$version/frp_$version_windows_amd64.zip"
             },
             "32bit": {
-                "url": "https://hub.fastgit.org/fatedier/frp/releases/download/v$version/frp_$_windows_386.zip"
+                "url": "https://hub.fastgit.org/fatedier/frp/releases/download/v$version/frp_$version_windows_386.zip"
             }
         },
-   /*      "hash": {
-            "url": "https://github.com/fatedier/frp/releases/tag/v$version/",
-            "regex": "$basename\\s*<ul>\\s*<li>$sha256"
-        } */
+        "bin": "frp_$version_windows_amd64"
+        // "hash": {
+        //     "url": "https://github.com/fatedier/frp/releases/tag/v$version/",
+        //     "regex": "$basename\\s*<ul>\\s*<li>$sha256"
+        // } 
     }
 }
