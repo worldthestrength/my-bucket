@@ -1,0 +1,45 @@
+{
+    //版本
+    "version": "0.37.1",
+    //描述
+    "description": "frp clint and frp server",
+    //主页
+    "homepage": "https://github.com.cnpmjs.org/fatedier/frp",
+    //开源协议
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com.cnpmjs.org/fatedier/frp/releases/download/v0.37.1/frp_0.37.1_windows_amd64.zip",
+            "hash": "E3AC4EC94DADC9979087036D68E50B083657B079FDEBC86D4309ACC871FBDB68"
+        },
+        "32bit": {
+            "url": "https://github.com.cnpmjs.org/fatedier/frp/releases/download/v0.37.1/frp_0.37.1_windows_amd64.zip",
+            "hash": "ecfd51545084d9b791874062c39eb0c7c7dd2991265ee7f4dc5064995a614e6c"
+        }
+    },
+    //bin变量
+    "bin": "frpc.exe",
+    // 快捷方式
+    "shortcuts": [
+        [
+            "frpc.exe",
+            "frpc"
+        ]
+    ],
+    //校验器  frp_0.37.1_windows_amd64.zip
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com.cnpmjs.org/fatedier/frp/releases/download/v$version/frp_$_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com.cnpmjs.org/fatedier/frp/releases/download/v$version/frp_$_windows_386.zip"
+            }
+        },
+   /*      "hash": {
+            "url": "https://github.com/fatedier/frp/releases/tag/v$version/",
+            "regex": "$basename\\s*<ul>\\s*<li>$sha256"
+        } */
+    }
+}
